@@ -21,9 +21,10 @@ var rootCmd = &cobra.Command{
 func init() {
 	// Create the create subcommand
 	createCmd := &cobra.Command{
-		Use:   "create",
-		Short: "Create something",
-		Long:  `This subcommand creates something.`,
+		Use:     "create",
+		Aliases: []string{"c"},
+		Short:   "Create something",
+		Long:    `This subcommand creates something.`,
 		Run: func(cmd *cobra.Command, args []string) {
 			fmt.Printf("Creating something named %s...\n", name)
 		},
